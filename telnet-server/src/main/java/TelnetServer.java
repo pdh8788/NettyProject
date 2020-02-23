@@ -13,7 +13,7 @@ public class TelnetServer {
 		EventLoopGroup boosGroup = new NioEventLoopGroup(1);
 		EventLoopGroup workerGroup = new NioEventLoopGroup();
 		
-		try {
+		try { 
 			ServerBootstrap b = new ServerBootstrap();
 			b.group(boosGroup, workerGroup)
 			.channel(NioServerSocketChannel.class)
