@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.github.nettybook</groupId>
+  <artifactId>telnet-server</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>netty test project</name>
+  <description>메이븐을 사용할 텔넷 서버 예제</description>
+  
+  <properties>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>io.netty</groupId>
+  		<artifactId>netty-all</artifactId>
+  		<version>4.0.28.Final</version>
+  	</dependency>
+  </dependencies>
+  
+  <build>
+  	<plugins>
+  		<plugin>
+  			<groupId>org.codehaus.mojo</groupId>
+  			<artifactId>exec-maven-plugin</artifactId>
+  			<version>1.4.0</version>
+  			<executions>
+  				<execution>
+  					<goals>
+  						<goal>java</goal>
+  					</goals>
+  				</execution>
+  			</executions>
+  			<configuration>
+  				<mainClass>com.github.nettybook.ch8.TelnetServer</mainClass>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
+  
+</project>
