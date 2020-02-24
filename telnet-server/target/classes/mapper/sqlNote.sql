@@ -1,0 +1,26 @@
+CREATE TABLE USERS (
+	  USERNO INT(10) auto_increment PRIMARY KEY,
+      USERID VARCHAR(45) NOT NULL,
+      USERNAME VARCHAR(45) NOT NULL,
+      PASSWORD VARCHAR(45) NOT NULL
+);
+
+
+INSERT INTO USERS (USERID, USERNAME, PASSWORD)
+VALUES ('foo@foobar.com', 'foobar', 'passWords');
+
+INSERT INTO USERS (USERID, USERNAME, PASSWORD)
+VALUES ('kris@foobar.com', 'kris jeong', 'zmfltm');
+
+INSERT INTO USERS (USERID, USERNAME, PASSWORD)
+VALUES ('ace@foobar.com', '김일등', 'numberOne');
+
+INSERT INTO USERS (USERID, USERNAME, PASSWORD)
+VALUES ('amy@foobar.com', 'amy lim', '');
+
+INSERT INTO USERS (USERID, USERNAME, PASSWORD)
+VALUES ('emma@foobar.com', '엠마', 'emma');
+
+COMMIT;
+
+SELECT * FROM USERS;
