@@ -30,7 +30,7 @@ public class ApiServer {
 	private int bossThreadCount;
 	
 	public void start() {
-		EventLoopGroup bossGroup = new NioEventLoopGroup(1);
+		EventLoopGroup bossGroup = new NioEventLoopGroup(bossThreadCount);
 		EventLoopGroup workerGroup = new NioEventLoopGroup(workerThreadCount);
 		ChannelFuture channelFuture = null;
 		

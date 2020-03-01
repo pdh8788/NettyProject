@@ -47,7 +47,7 @@ public class TokenIssue extends ApiRequestTemplate{
 		
 		try {
 			Map<String, Object> result = sqlSession.selectOne("users.userInfoByPassword", this.reqData);
-			
+			System.out.println("result :" + result);
 			if( result != null ) {
 				final int threeHour = 60 * 60 * 3;
 				long issueDate = System.currentTimeMillis() / 1000;
@@ -84,6 +84,5 @@ public class TokenIssue extends ApiRequestTemplate{
 		}
 		
 	}
-	
 	
 }

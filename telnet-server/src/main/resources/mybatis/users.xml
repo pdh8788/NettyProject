@@ -6,10 +6,10 @@
 	</select>
 
 	<select id="userInfoByEmail" parameterType="map" resultType="map">
-		select USERNO, USERID, PASSWORD from NETTY_EXAMPLE_DB.USERS where USERID = #{email}
+		select USERNO, USERID, PASSWORD from USERS where USERID = #{email}
 	</select>
 
 	<select id="userInfoByPassword" parameterType="map" resultType="map">
-		select USERID, USERID, PASSWORD from NETTY_EXAMPLE_DB.USERS where userNo = #{userNo} and password = #{password}
+		select USERNO, USERID, PASSWORD from USERS where userNo = #{userNo} and password = #{password}
 	</select>
 </mapper>

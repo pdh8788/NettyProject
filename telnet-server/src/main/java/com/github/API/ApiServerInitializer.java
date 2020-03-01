@@ -23,7 +23,7 @@ public class ApiServerInitializer extends ChannelInitializer<SocketChannel>{
 		// 클라이언트 채널로 수신된 HTTP 데이터를 처리하기 위한 채널 파이프라인 객체를 생성한다.
 		ChannelPipeline p = ch.pipeline();
 		if ( sslCtx != null ) {
-			p.addLast(sslCtx.newHandler(ch.alloc()));
+//			p.addLast(sslCtx.newHandler(ch.alloc()));
 		}
 		// HttpRequestDecoder는 HTTP 요청을 처리하는 디코더다. 즉 클라이언트가 전송한 HTTP 프로토콜을 네티의 바이트
 		// 버퍼로 변환하는 작업을 수행한다.

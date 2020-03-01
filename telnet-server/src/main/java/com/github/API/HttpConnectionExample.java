@@ -16,7 +16,7 @@ public class HttpConnectionExample {
 		HttpConnectionExample http = new HttpConnectionExample();
 
 		System.out.println("GET으로 데이터 가져오기");
-		http.sendGet("https://www.naver.com");
+		http.sendGet("http://localhost:8080/users");
 
 		//System.out.println("POST로 데이터 가져오기");
 		//String urlParameters = "sn=C02G8416DRJM&cn=&locale=&caller=&num=12345";

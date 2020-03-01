@@ -29,7 +29,7 @@ public abstract class ApiRequestTemplate implements ApiRequest{
 		this.apiResult = new JsonObject();
 		this.reqData = reqData;
 		
-		logger.info("request data : " + this.reqData);
+		System.out.println("request data : " + this.reqData);
 	}
 	
 	public void executeService() {
@@ -53,14 +53,14 @@ public abstract class ApiRequestTemplate implements ApiRequest{
 		// executeService 메서드가 호출된 이후에 service 메서드에서 할당된 API 처리 결과를 돌려준다.
 		return this.apiResult;
 	}
-//	
-//	@Override
-//	public void requestParamValidation() throws RequestParamException {
-//		// TODO Auto-generated method stub
-//		if( getClass().getClasses().length == 0) {
-//			return;
-//		}
-//	}
+	
+	@Override
+	public void requestParamValidation() throws RequestParamException {
+		// TODO Auto-generated method stub
+		if( getClass().getClasses().length == 0) {
+			return;
+		}
+	}
 	
 	public final <T extends Enum<T>> T fromValue(Class<T> paramClass, String paramValue) {
 		if ( paramValue == null  || paramClass == null ) {

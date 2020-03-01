@@ -10,7 +10,10 @@ public class ApiServerMain {
 		AbstractApplicationContext springContext = null;
 		try {
 			springContext = new AnnotationConfigApplicationContext(ApiServerConfig.class);
+			springContext.registerShutdownHook();
 			
+			ApiServer server = springContext.getBean(ApiServer.class);
+			server.start();
 		}
 		finally {
 			springContext.close();
